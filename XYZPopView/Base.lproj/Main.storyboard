@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fr4-BU-ksd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsy-tI-aOJ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="348" id="bvC-hn-LKb"/>
+                                </constraints>
+                                <mutableString key="text">每日更新关注:http://weibo.com/hanjunqiang  新浪微博！
+亲们, 首先让我们来看一下微信支付的流程吧.
+1. 注册微信开放平台，创建应用获取appid，appSecret，申请支付功能，申请成功之后会返回一些参数.
+2. 下载微信支付sdk
+3. 客户端请求订单，后台与微信后台交互，返回给客户端支付参数
+4. 调用微信客户端，由微信客户端和微信服务器打交道；
+5. 客户端和服务端都会收到支付结果；（前台消息不可靠，我们需要去后台验证，如果后台没有收到支付通知，后台去微信服务器验证然后将结果返回给客户端）
+
+支付流程图(大家看一下支付流程).
+
+那么我们现在就开始写微信支付的demo了.
+开发步骤
+1：去微信开放平台注册应用
+https://open.weixin.qq.com/cgi-bin/index?t=home/index&amp;lang=zh_CN&amp;token=2c0fee9c43e1eb8f9febcc7cb73abf598e2d4011
+
+创建移动应用并成功之后会收到腾讯发来的邮件</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bvC-hn-LKb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bvC-hn-LKb"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jsy-tI-aOJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="3ET-dr-ciH"/>
+                            <constraint firstAttribute="trailing" secondItem="jsy-tI-aOJ" secondAttribute="trailing" constant="20" id="CBf-Ry-LEN"/>
+                            <constraint firstItem="jsy-tI-aOJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="WSi-UF-Ioi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jsy-tI-aOJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3ET-dr-ciH"/>
+                                <exclude reference="CBf-Ry-LEN"/>
+                                <exclude reference="WSi-UF-Ioi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jsy-tI-aOJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3ET-dr-ciH"/>
+                                <include reference="CBf-Ry-LEN"/>
+                                <include reference="WSi-UF-Ioi"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="l0K-uX-j7t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="451.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hdl-wM-uie">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fr4-BU-ksd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vog-zQ-pWm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uK5-5P-VMZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d44-OR-8mV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="1112"/>
+        </scene>
+    </scenes>
+</document>
